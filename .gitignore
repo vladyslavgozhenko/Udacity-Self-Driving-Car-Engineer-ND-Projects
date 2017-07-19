@@ -1,2 +1,4 @@
 /test_images_output/*
 /test_videos_output/*
+/bad_images/*
+/output_images/*
