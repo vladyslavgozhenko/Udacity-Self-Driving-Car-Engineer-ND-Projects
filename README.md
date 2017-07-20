@@ -1,53 +1,42 @@
 # **Finding Lane Lines on the Road** 
-[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+
 
 <img src="examples/laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
-
+---
 Overview
 ---
 
 When we drive, we use our eyes to decide where to go.  The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle.  Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
 
-In this project you will detect lane lines in images using Python and OpenCV.  OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.  
+In this project I will detect lane lines in images using Python and OpenCV.  OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.  
 
-To complete the project, two files will be submitted: a file containing project code and a file containing a brief write up explaining your solution. We have included template files to be used both for the [code](https://github.com/udacity/CarND-LaneLines-P1/blob/master/P1.ipynb) and the [writeup](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md).The code file is called P1.ipynb and the writeup template is writeup_template.md 
-
-To meet specifications in the project, take a look at the requirements in the [project rubric](https://review.udacity.com/#!/rubrics/322/view)
-
-
-Creating a Great Writeup
 ---
-For this project, a great writeup should provide a detailed response to the "Reflection" section of the [project rubric](https://review.udacity.com/#!/rubrics/322/view). There are three parts to the reflection:
+## Pipeline 
 
-1. Describe the pipeline
+1. To extract lane lines from still images will be used grayscalling, Gaussian smoothing, color selection, region of interest selection, Canny Edge Detection and Hough Transform, approximation/extrapolation of straight lines. On the following steps are show results of applying different functions to an image.  
 
-2. Identify any shortcomings
+<img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-LaneLines-P1-master/pipeline.png" width="480" alt="Combined Image" />
 
-3. Suggest possible improvements
+Red lines show found the left and right lanes, green lines show the region of interest. In the algorithm was analysed only the region of interest for the possible lanes on it. 
 
-We encourage using images in your writeup to demonstrate how your pipeline works.  
+2. To extract lanes from video files video files, I will apply steps from the first paragraph to each video frame. To avoid shaking of annotated lanes on videos I will smooth annotated lines from several frames (some kind of moving average of lane lines between adjacent frames). Number of smoothing parameters was chosen to avoid shaky lines.
+3. In the challenge, I extracted "average" color from a road (in the test video it was grayish color). After that I added tolerances to select all the road colors, except for the white lanes or yellow side lanes. This approach helped me overcome effect on lane colors/brightness from different illumination of the highway, because the illumination changed "overage" color of the road as well. 
 
-All that said, please be concise!  We're not looking for you to write a book here: just a brief description.
-
-You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup. Here is a link to a [writeup template file](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md). 
-
-
-The Project
 ---
 
-## If you have already installed the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) you should be good to go!   If not, you should install the starter kit to get started on this project. ##
+## Shortcomings
 
-**Step 1:** Set up the [CarND Term1 Starter Kit](https://classroom.udacity.com/nanodegrees/nd013/parts/fbf77062-5703-404e-b60c-95b78b2f3f9e/modules/83ec35ee-1e02-48a5-bdb7-d244bd47c2dc/lessons/8c82408b-a217-4d09-b81d-1bda4c6380ef/concepts/4f1870e0-3849-43e4-b670-12e6f2d4b7a7) if you haven't already.
+The algorithm won't work/won't be efficient if the following cases:
+* if a road very curvy, since Hough Transform won't find any lines there;
+* the algorithm doesn't take into account perspective (so all the line always distorted and not really parallel) and camera position, it can explain shaky on videos.
+* a problem could be weather conditions: too much water or snow on the road. Snow can be interpreted as line and water can hide the lanes;
+* temporal and regular lanes can be mixed up (i.e. during high way repairs).
 
-**Step 2:** Open the code in a Jupyter Notebook
+---
 
-You will complete the project code in a Jupyter notebook.  If you are unfamiliar with Jupyter Notebooks, check out <A HREF="https://www.packtpub.com/books/content/basics-jupyter-notebook-and-python" target="_blank">Cyrille Rossant's Basics of Jupyter Notebook and Python</A> to get started.
+## Possible improvements
+*use other points of interest to identify exact position of the lanes (trees, other cars, high way concrete boarder etc.);
+*use additionally some other non optical methods of identifying lanes (laser or some kind of radar);
+*use other geometrical approach: take into account geometrical distortions due the perspective. Take into account exact camera position or use even 2 cameras.  
 
-Jupyter is an Ipython notebook where you can run blocks of code and see results interactively.  All the code for this project is contained in a Jupyter notebook. To start Jupyter in your browser, use terminal to navigate to your project directory and then run the following command at the terminal prompt (be sure you've activated your Python 3 carnd-term1 environment as described in the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) installation instructions!):
-
-`> jupyter notebook`
-
-A browser window will appear showing the contents of the current directory.  Click on the file called "P1.ipynb".  Another browser window will appear displaying the notebook.  Follow the instructions in the notebook to complete the project.  
-
-**Step 3:** Complete the project and submit both the Ipython notebook and the project writeup
-
+---
