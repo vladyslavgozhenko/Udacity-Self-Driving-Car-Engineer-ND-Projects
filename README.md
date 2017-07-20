@@ -3,7 +3,7 @@
 
 <img src="examples/laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
 ---
-Overview
+## Overview
 ---
 
 When we drive, we use our eyes to decide where to go.  The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle.  Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
@@ -35,8 +35,8 @@ The algorithm won't work/won't be efficient if the following cases:
 ---
 
 ## Possible improvements
-*use other points of interest to identify exact position of the lanes (trees, other cars, high way concrete boarder etc.);
-*use additionally some other non optical methods of identifying lanes (laser or some kind of radar);
-*use other geometrical approach: take into account geometrical distortions due the perspective. Take into account exact camera position or use even 2 cameras.  
+* use other points of interest to identify exact position of the lanes (trees, other cars, high way concrete boarder etc.);
+* use additionally some other non optical methods of identifying lanes (laser or some kind of radar);
+* use other geometrical approach: take into account geometrical distortions due the perspective. Take into account exact camera position or use even 2 cameras.  
 
 ---
