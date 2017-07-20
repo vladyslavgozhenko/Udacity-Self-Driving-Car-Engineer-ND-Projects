@@ -4,7 +4,7 @@ All projects from the Term1 will be saved in different branches of the following
 
 ## Project list:
 
-**Project1: Finding lane lines in videos** 
+**Project1: Finding Lane Lines on the Road** 
 
 In this project the left and right lanes will be annotated in video files.
 [Project1, Term 1, Lane Lines.](https://github.com/wiwawo/CarND-Term1/tree/CarND-LaneLines-P1-master)
