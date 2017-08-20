@@ -83,6 +83,7 @@ The goals / steps of this project are the following:
 </p>
    In our case not 10 digits, but 43 traffic signs should be analyzed, thefore we changed number of the outputs to 43. Quite offen color information is not critical for neural networks, therefore I will convert images to grayscale.
    Chosen architecture in more details:
+   
         Input layer 1. 32x32x1
         Convolution layer 1. The output shape should be 28x28x6.
         Activation 1. ReLU activation.
