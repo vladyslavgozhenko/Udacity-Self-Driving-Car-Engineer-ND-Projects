@@ -2,18 +2,18 @@
 <p align="center">
 <img src="readme_images\image_01.JPG" width="480" alt="Project 2: Cover" align = 'center'/> 
 </p>
----
+   ---
 Overview
----
+   ---
 In this project, I will use convolutional neural networks to classify traffic signs. I will train and validate a model so it can classify traffic sign images using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). After the model is trained, I will then try out the model on images of German traffic signs that I found on the web.
----
+   ---
 The Project
----
+   ---
 The goals / steps of this project are the following:
 
 * Load the data set:
    Downloaded German Traffic Sign Dataset consists of 3 pickle objects with training, validation and test data sets. After unpacking pickle objects, we can explore each of 3 data sets.
-
+   
 * Exploration, summary and visualization of the data set:
    Each of the data sets has traffic sign pictures 32 by 32 pixels with 3 RGB channels. Each sample is labeled as well.
    Number of samples in training set is 34799, in validation set - 4410 and in test set - 12630. It is apprx. ratio 100%(train)/13%(validation)/36%(test). Thefore there is enough samples to train and test the model.
@@ -71,6 +71,7 @@ The goals / steps of this project are the following:
 <img src="readme_images\signs.png" width="480" alt="Signs" />  
 </p>
    All randomly selected samples for each label fit to labels in the [signnames.csv](signnames.csv).
+   
 * Design, train and test a model architecture
     As a basis for my model I took the [LeNet](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf) architecture of the convolutional neural networks.
     LeNet architecture proved itself to be effective solution for handwritten charecter recognition.
@@ -79,7 +80,6 @@ The goals / steps of this project are the following:
 <img src="readme_images\NeuralNetworkArchitecture.JPG" width="480" alt="LeNet" />  
 </p>
    In our case not 10 digits, but 43 traffic signs should be analyzed, thefore we changed number of the outputs to 43. Quite offen color information is not critical for neural networks, therefore I will convert images to grayscale.
-
    Chosen architecture in more details:
         Input layer 1. 32x32x1
         Convolution layer 1. The output shape should be 28x28x6.
@@ -95,34 +95,23 @@ The goals / steps of this project are the following:
         Fully connected layer 3. This should have 43 outputs.
 
 *  Preprocession:
-
-    1. 3 Channel images will be converted to 1 channel image. Then part of the images with signs will be cut off the images and scaled to 32x32x1 image. I tried to normalize images (from -128 to 128)/128, but the accuracy just worsens after it. Therefore normalization was not used in the pipeline. 
-
+    3 Channel images will be converted to 1 channel image. Then part of the images with signs will be cut off the images and scaled to 32x32x1 image. I tried to normalize images (from -128 to 128)/128, but the accuracy just worsens after it. Therefore normalization was not used in the pipeline. 
     Pipeline for image preprocession looks like this:
-
 <p align="center">
     <img src="readme_images\signs_transformations.JPG" width="480" alt="Sign transformation" />   
 </p>
-        
    This preprocession technique will be applied to all the images in the training, validation and test sets.
-
    I did several experiments with different epochs number and learning rates. As you can see on the picture, 50 epochs with the learning rate 0.001 should be optimal for the model:
-
  <p align="center">
     <img src="readme_images\accuracy-learning rate.png" width="480" alt="accuracy/learning rate" />   
 </p>
-    
-
 After 50 epochs validation accuracy was 0.938 and test accuracy was 0.925. Thefore the model generalize data quite good. 
-
 For training was used Adam optimizer (Adam: a method for stochastic optimization) and batch size 128 samples.
-
 * Predictions of the model on new images
     10 images with traffic signs were downloaded from Internet.
 <p align="center">
     <img src="readme_images\signs_online.PNG" width="480" alt="signs from internet" />
 </p>
-    
    Challenges in recognition of these images (the number in the top right corners were added just for informational perposes and won't be fed to the neural network) are:
         1st sign is dirty;
         2nd and 3d signs are simiar in shapes and have similar tilts. It's interesting whether the modules confuses these 2 signs;
@@ -137,9 +126,7 @@ For training was used Adam optimizer (Adam: a method for stochastic optimization
 <p align="center">
     <img src="readme_images\predictions.png" width="480" alt="top3 predictions" /> 
 </p>
- 
-* Softmax probabilities for 10 images:
-
+ * Softmax probabilities for 10 images:
     picture number 1:  TopKV2(values=array([  1.00000000e+00,   3.39671054e-14,   1.61444785e-14], dtype=float32), indices=array([22,  0, 25]))
     picture number 2:  TopKV2(values=array([  1.00000000e+00,   3.36704928e-19,   6.52081102e-25], dtype=float32), indices=array([17, 14, 20]))
     picture number 3:  TopKV2(values=array([  1.00000000e+00,   2.93292358e-16,   7.95178158e-20], dtype=float32), indices=array([15,  2, 40]))
