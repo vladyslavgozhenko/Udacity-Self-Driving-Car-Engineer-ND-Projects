@@ -4,12 +4,11 @@
 <img src="readme_images\image_01.JPG" width="480" alt="Project 2: Cover" align = 'center'/> 
 </p>
 
-### Overview
+Overview
 ---
-
 In this project, I will use convolutional neural networks to classify traffic signs. I will train and validate a model so it can classify traffic sign images using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). After the model is trained, I will then try out the model on images of German traffic signs that I found on the web.
 ---
-### The Project
+The Project
 ---
 The goals / steps of this project are the following:
 
