@@ -4,54 +4,27 @@
 <img src="readme_images\image_01.JPG" width="480" alt="Project 2: Cover" align = 'center'/> 
 </p>
 
-Overview
-
+### Overview
 ---
-
 In this project, I will use convolutional neural networks to classify traffic signs. I will train and validate a model so it can classify traffic sign images using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). After the model is trained, I will then try out the model on images of German traffic signs that I found on the web.
-
-​
-
 ---
-
-​
-
-The Project
-
+### The Project
 ---
-
 The goals / steps of this project are the following:
 
-
 * Load the data set:
-
-​
-
    1. Downloaded German Traffic Sign Dataset consists of 3 pickle objects with training, validation and test data sets. After unpacking pickle objects, we can explore each of 3 data sets.
 
-​
-
 * Exploration, summary and visualization of the data set:
-
-​
-
    1. Each of the data sets has traffic sign pictures 32 by 32 pixels with 3 RGB channels. Each sample is labeled as well.
 
-   Number of samples in training set is 34799, in validation set - 4410 and in test set - 12630. It is apprx. ratio 100%(train)/13%(validation)/36%(test).
-
-    Thefore there is enough samples to train and test the model.
-
-    There are 43 different signs in the German Traffic Sign Dataset according to [signnames.csv](/signnames.csv).
-
-    Distribution of the 43 sings in the data sets is following:
+   Number of samples in training set is 34799, in validation set - 4410 and in test set - 12630. It is apprx. ratio 100%(train)/13%(validation)/36%(test). Thefore there is enough samples to train and test the model.
+    There are 43 different signs in the German Traffic Sign Dataset according to [signnames.csv](/signnames.csv). Distribution of the 43 sings in the data sets is following:
 <p align="center">
 <img src="readme_images\train_valid_test_dist.png" width="480" alt="Samples' distributon" />     
 </p>
-
    As it can be seen, there are samples of every sign in all three datasets. Probably it should be enough to train a model without overfitting for some signs and underfitting for others.
-
     To be sure that data is labeled accordinly to [signnames.csv](signnames.csv), I took randomly 43 images for each label and compared their pictures to lables.
-
           ClassId                                           SignName
           0                               Speed limit (20km/h)
           1                               Speed limit (30km/h)
@@ -120,30 +93,17 @@ The goals / steps of this project are the following:
    Chosen architecture in more details:
 
         Input layer 1. 32x32x1
-
         Convolution layer 1. The output shape should be 28x28x6.
-
         Activation 1. ReLU activation.
-
         Pooling layer 1. The output shape should be 14x14x6.
-
         Convolution layer 2. The output shape should be 10x10x16.
-
         Activation 2. ReLU activation.
-
         Pooling layer 2. The output shape should be 5x5x16.
-
         Flatten layer. Flatten the output shape of the final pooling layer such that it's 1D instead of 3D. 
-
         Activation 3. ReLU activation.
-
         Fully connected layer 2. This should have 84 outputs.
-
         Activation 4. ReLU activation.
-
         Fully connected layer 3. This should have 43 outputs.
-
-    
 
  *  Preprocession:
 
@@ -212,33 +172,20 @@ For training was used Adam optimizer (Adam: a method for stochastic optimization
 
     picture number 10:  TopKV2(values=array([  6.40612960e-01,   3.59386951e-01,   1.13161919e-11], dtype=float32), indices=array([ 6, 36,  5]))    
 
-​
-
    As you can see from the pictures for predictions, the NN guessed the signs with 100% accuracy. 
-
    Looking at softmax probabilities we can see, that with 2 images probilities was not very high.
-
-   For the 10th image (noise) probability was only 64% and for the 6 image (sign covered with snow) - 58%.  
-
-   Thefore to improve accuracy and reliability of the system under real-life conditions (weather, graffiti, camera malfunction etc.), the optical recognition should be combined with other methods (gps coordinates of signs, update/change signs, so that they can be recognized not only with a camera, collect data from other cars and sources). 
-
-    ---
-
-## Visualisation of the network 
-
+   For the 10th image (noise) probability was only 64% and for the 6 image (sign covered with snow) - 58%. Thefore to improve accuracy and reliability of the system under real-life conditions (weather, graffiti, camera malfunction etc.), the optical recognition should be combined with other methods (gps coordinates of signs, update/change signs, so that they can be recognized not only with a camera, collect data from other cars and sources). 
+   ---
+### Visualisation of the network 
+   ---
 In this section after successfully training the neural network I want to see what it's feature maps look like by plotting the output of the network's weight layers in response to a test stimuli image. From these plotted feature maps, it's possible to see what characteristics of an image the network finds interesting. For a sign, maybe the inner network feature maps react with high activation to the sign's boundary outline or to the contrast in the sign's painted symbol.
-
 <p align="center">
 <img src="readme_images\nn_inner_states.PNG" width="480" alt="nn inner states" />
 </p>
    ---
-
-## Possible improvements
-
+### Possible improvements
+   ---
 Designed system recognized test/downloaded images quite good. To improve its performance the following can be done:
-
 * using larger training sets with noisy/empty images in it to avoid situations, when NN sees traffic signs in any provided image;
-
 * use several NN trained on different data sets with images made by different ambient conditions (winter, sommer, rain, day, night, fog etc.);
-
 * to impelement additional ways to protect from false recognitions due to graffiti or some adverse/hostile acts. 
