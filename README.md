@@ -117,13 +117,13 @@ For training was used Adam optimizer (Adam: a method for stochastic optimization
 </p>
    Challenges in recognition of these images (the number in the top right corners were added just for informational perposes and won't be fed to the neural network) are:
    
-   1st sign is dirty;
-   2nd and 3d signs are simiar in shapes and have similar tilts. It's interesting whether the modules confuses these 2 signs;
-   4th sign is similar to the 1st sign in shape;
-   5th and 6th are the same sign under different weather conditions;
-   7th and 8th are the same sign with and without graffiti, because it can confuse a self-driving car. I.e. as [reported](http://blog.caranddriver.com/researchers-find-a-malicious-way-to-meddle-with-autonomous-cars/) earlier this month;
-   9th sign has different shape from all other signs and less frequent than other signs, thefore the model might be undertrained on this kind of images;
-   10th images doesn't have any sign on it, but the chosen model will still probably find a sign on it.
+*  1st sign is dirty;
+*  2nd and 3d signs are simiar in shapes and have similar tilts. It's interesting whether the modules confuses these 2 signs;
+*  4th sign is similar to the 1st sign in shape;
+*  5th and 6th are the same sign under different weather conditions;
+*  7th and 8th are the same sign with and without graffiti, because it can confuse a self-driving car. I.e. as [reported](http://blog.caranddriver.com/researchers-find-a-malicious-way-to-meddle-with-autonomous-cars/) earlier this month;
+*  9th sign has different shape from all other signs and less frequent than other signs, thefore the model might be undertrained on this kind of images;
+*  10th images doesn't have any sign on it, but the chosen model will still probably find a sign on it.
    Let's apply the preprocessing pipeline to the images and after it the neural network.
    Test accuracy is 0.900. Taking in account, that the image number 10 has no signs on it, the model performed (fortunately) with accuracy 100%, if there wouldn't be the image with noise.
 <p align="center">
