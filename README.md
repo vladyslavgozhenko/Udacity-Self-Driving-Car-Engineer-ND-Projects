@@ -123,7 +123,6 @@ For training was used Adam optimizer (Adam: a method for stochastic optimization
         7th and 8th are the same sign with and without graffiti, because it can confuse a self-driving car. I.e. as [reported](http://blog.caranddriver.com/researchers-find-a-malicious-way-to-meddle-with-autonomous-cars/) earlier this month;
         9th sign has different shape from all other signs and less frequent than other signs, thefore the model might be undertrained on this kind of images;
         10th images doesn't have any sign on it, but the chosen model will still probably find a sign on it.
-
     Let's apply the preprocessing pipeline to the images and after it the neural network.
     Test accuracy is 0.900. Taking in account, that the image number 10 has no signs on it, the model performed (fortunately) with accuracy 100%, if there wouldn't be the image with noise.
 <p align="center">
