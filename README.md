@@ -9,7 +9,9 @@ All projects from the Term1 will be saved in different branches of the following
 In this project the left and right lanes will be annotated in video files.
 [Project1, Term 1, Lane Lines.](https://github.com/wiwawo/CarND-Term1/tree/CarND-LaneLines-P1-master)
 
+<p align='center'>
 <img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-LaneLines-P1-master/examples/laneLines_thirdPass.jpg" width="480" alt="lane lines" />
+</p>
 
 ---
 **Project1: Project: Build a Traffic Sign Recognition Program** 
@@ -17,4 +19,6 @@ In this project the left and right lanes will be annotated in video files.
 In this project, I will use convolutional neural networks to classify traffic signs.
 [Project2, Term 1, Traffic Sign Recognition.](https://github.com/wiwawo/CarND-Term1/tree/CarND-Traffic-Sign-Classifier-Project)
 
+<p align='center'>
 <img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-Traffic-Sign-Classifier-Project/readme_images/image_01.JPG" width="480" alt="traffic signs" />
+</p>
