@@ -13,10 +13,8 @@ In this project, I will use convolutional neural networks to classify traffic si
 The Project
    ---
 The goals / steps of this project are the following:
-
 * Load the data set:
    Downloaded German Traffic Sign Dataset consists of 3 pickle objects with training, validation and test data sets. After unpacking pickle objects, we can explore each of 3 data sets.
-   
 * Exploration, summary and visualization of the data set:
    Each of the data sets has traffic sign pictures 32 by 32 pixels with 3 RGB channels. Each sample is labeled as well.
    Number of samples in training set is 34799, in validation set - 4410 and in test set - 12630. It is apprx. ratio 100%(train)/13%(validation)/36%(test). Thefore there is enough samples to train and test the model.
