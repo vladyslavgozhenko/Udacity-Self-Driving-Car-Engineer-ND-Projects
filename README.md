@@ -146,7 +146,7 @@ Softmax probabilities for 10 images:
    Looking at softmax probabilities we can see, that with 2 images probilities was not very high.
    For the 10th image (noise) probability was only 64% and for the 6 image (sign covered with snow) - 58%. Thefore to improve accuracy and reliability of the system under real-life conditions (weather, graffiti, camera malfunction etc.), the optical recognition should be combined with other methods (gps coordinates of signs, update/change signs, so that they can be recognized not only with a camera, collect data from other cars and sources). 
    
-   ---
+---
 ### Visualisation of the network 
    ---   
    
