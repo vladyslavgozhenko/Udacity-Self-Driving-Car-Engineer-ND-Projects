@@ -1,4 +1,5 @@
 ## Project: Build a Traffic Sign Recognition Program
+
 <p align="center">
 <img src="readme_images\image_01.JPG" width="480" alt="Project 2: Cover" align = 'center'/> 
 </p>
@@ -25,6 +26,7 @@ The goals / steps of this project are the following:
 </p>
    As it can be seen, there are samples of every sign in all three datasets. Probably it should be enough to train a model without overfitting for some signs and underfitting for others.
     To be sure that data is labeled accordinly to [signnames.csv](signnames.csv), I took randomly 43 images for each label and compared their pictures to lables.
+    
           ClassId                                           SignName
           0                               Speed limit (20km/h)
           1                               Speed limit (30km/h)
@@ -129,6 +131,7 @@ For training was used Adam optimizer (Adam: a method for stochastic optimization
     <img src="readme_images\predictions.png" width="480" alt="top3 predictions" /> 
 </p>
  * Softmax probabilities for 10 images:
+ 
     picture number 1:  TopKV2(values=array([  1.00000000e+00,   3.39671054e-14,   1.61444785e-14], dtype=float32), indices=array([22,  0, 25]))
     picture number 2:  TopKV2(values=array([  1.00000000e+00,   3.36704928e-19,   6.52081102e-25], dtype=float32), indices=array([17, 14, 20]))
     picture number 3:  TopKV2(values=array([  1.00000000e+00,   2.93292358e-16,   7.95178158e-20], dtype=float32), indices=array([15,  2, 40]))
