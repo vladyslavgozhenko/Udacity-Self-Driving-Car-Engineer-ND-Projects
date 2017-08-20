@@ -125,8 +125,9 @@ For training was used Adam optimizer (Adam: a method for stochastic optimization
         10th images doesn't have any sign on it, but the chosen model will still probably find a sign on it.
     Let's apply the preprocessing pipeline to the images and after it the neural network.
     Test accuracy is 0.900. Taking in account, that the image number 10 has no signs on it, the model performed (fortunately) with accuracy 100%, if there wouldn't be the image with noise.
+    
 <p align="center">
-    <img src="readme_images\predictions.png" width="480" alt="top3 predictions" /> 
+   <img src="readme_images\predictions.png" width="480" alt="top3 predictions" /> 
 </p>
  * Softmax probabilities for 10 images:
  
@@ -145,14 +146,17 @@ For training was used Adam optimizer (Adam: a method for stochastic optimization
    For the 10th image (noise) probability was only 64% and for the 6 image (sign covered with snow) - 58%. Thefore to improve accuracy and reliability of the system under real-life conditions (weather, graffiti, camera malfunction etc.), the optical recognition should be combined with other methods (gps coordinates of signs, update/change signs, so that they can be recognized not only with a camera, collect data from other cars and sources). 
    ---
 ### Visualisation of the network 
-   ---
+   ---   
+   
 In this section after successfully training the neural network I want to see what it's feature maps look like by plotting the output of the network's weight layers in response to a test stimuli image. From these plotted feature maps, it's possible to see what characteristics of an image the network finds interesting. For a sign, maybe the inner network feature maps react with high activation to the sign's boundary outline or to the contrast in the sign's painted symbol.
 <p align="center">
 <img src="readme_images\nn_inner_states.PNG" width="480" alt="nn inner states" />
 </p>
+   
    ---
 ### Possible improvements
    ---
+   
 Designed system recognized test/downloaded images quite good. To improve its performance the following can be done:
 * using larger training sets with noisy/empty images in it to avoid situations, when NN sees traffic signs in any provided image;
 * use several NN trained on different data sets with images made by different ambient conditions (winter, sommer, rain, day, night, fog etc.);
