@@ -141,6 +141,7 @@ Softmax probabilities for 10 images:
 *  picture number 8:  TopKV2(values=array([  1.00000000e+00,   1.52759819e-11,   2.22230071e-13], dtype=float32), indices=array([14,  1, 25]))
 *  picture number 9:  TopKV2(values=array([  1.00000000e+00,   4.38013394e-34,   4.22565083e-38], dtype=float32), indices=array([13, 39,  5]))
 *  picture number 10:  TopKV2(values=array([  6.40612960e-01,   3.59386951e-01,   1.13161919e-11], dtype=float32), indices=array([ 6, 36,  5]))   
+
    As you can see from the pictures for predictions, the NN guessed the signs with 100% accuracy. 
    Looking at softmax probabilities we can see, that with 2 images probilities was not very high.
    For the 10th image (noise) probability was only 64% and for the 6 image (sign covered with snow) - 58%. Thefore to improve accuracy and reliability of the system under real-life conditions (weather, graffiti, camera malfunction etc.), the optical recognition should be combined with other methods (gps coordinates of signs, update/change signs, so that they can be recognized not only with a camera, collect data from other cars and sources). 
