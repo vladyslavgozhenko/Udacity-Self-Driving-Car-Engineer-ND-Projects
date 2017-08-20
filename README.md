@@ -116,6 +116,7 @@ For training was used Adam optimizer (Adam: a method for stochastic optimization
     <img src="readme_images\signs_online.PNG" width="480" alt="signs from internet" />
 </p>
    Challenges in recognition of these images (the number in the top right corners were added just for informational perposes and won't be fed to the neural network) are:
+   
         1st sign is dirty;
         2nd and 3d signs are simiar in shapes and have similar tilts. It's interesting whether the modules confuses these 2 signs;
         4th sign is similar to the 1st sign in shape;
@@ -132,16 +133,16 @@ For training was used Adam optimizer (Adam: a method for stochastic optimization
 
  * Softmax probabilities for 10 images:
  
-    picture number 1:  TopKV2(values=array([  1.00000000e+00,   3.39671054e-14,   1.61444785e-14], dtype=float32), indices=array([22,  0, 25]))
-    picture number 2:  TopKV2(values=array([  1.00000000e+00,   3.36704928e-19,   6.52081102e-25], dtype=float32), indices=array([17, 14, 20]))
-    picture number 3:  TopKV2(values=array([  1.00000000e+00,   2.93292358e-16,   7.95178158e-20], dtype=float32), indices=array([15,  2, 40]))
-    picture number 4:  TopKV2(values=array([  1.00000000e+00,   5.63426699e-14,   1.10788529e-34], dtype=float32), indices=array([11, 27, 30]))
-    picture number 5:  TopKV2(values=array([  1.00000000e+00,   2.15859703e-08,   5.24542517e-15], dtype=float32), indices=array([30, 28, 11]))
-    picture number 6:  TopKV2(values=array([  5.85210800e-01,   4.14788246e-01,   4.44743534e-07], dtype=float32), indices=array([30, 11, 29]))
-    picture number 7:  TopKV2(values=array([  1.00000000e+00,   4.99432495e-09,   3.64846278e-11], dtype=float32), indices=array([14, 39, 13]))
-    picture number 8:  TopKV2(values=array([  1.00000000e+00,   1.52759819e-11,   2.22230071e-13], dtype=float32), indices=array([14,  1, 25]))
-    picture number 9:  TopKV2(values=array([  1.00000000e+00,   4.38013394e-34,   4.22565083e-38], dtype=float32), indices=array([13, 39,  5]))
-    picture number 10:  TopKV2(values=array([  6.40612960e-01,   3.59386951e-01,   1.13161919e-11], dtype=float32), indices=array([ 6, 36,  5]))   
+         picture number 1:  TopKV2(values=array([  1.00000000e+00,   3.39671054e-14,   1.61444785e-14], dtype=float32), indices=array([22,  0, 25]))
+         picture number 2:  TopKV2(values=array([  1.00000000e+00,   3.36704928e-19,   6.52081102e-25], dtype=float32), indices=array([17, 14, 20]))
+         picture number 3:  TopKV2(values=array([  1.00000000e+00,   2.93292358e-16,   7.95178158e-20], dtype=float32), indices=array([15,  2, 40]))
+         picture number 4:  TopKV2(values=array([  1.00000000e+00,   5.63426699e-14,   1.10788529e-34], dtype=float32), indices=array([11, 27, 30]))
+         picture number 5:  TopKV2(values=array([  1.00000000e+00,   2.15859703e-08,   5.24542517e-15], dtype=float32), indices=array([30, 28, 11]))
+         picture number 6:  TopKV2(values=array([  5.85210800e-01,   4.14788246e-01,   4.44743534e-07], dtype=float32), indices=array([30, 11, 29]))
+         picture number 7:  TopKV2(values=array([  1.00000000e+00,   4.99432495e-09,   3.64846278e-11], dtype=float32), indices=array([14, 39, 13]))
+         picture number 8:  TopKV2(values=array([  1.00000000e+00,   1.52759819e-11,   2.22230071e-13], dtype=float32), indices=array([14,  1, 25]))
+         picture number 9:  TopKV2(values=array([  1.00000000e+00,   4.38013394e-34,   4.22565083e-38], dtype=float32), indices=array([13, 39,  5]))
+         picture number 10:  TopKV2(values=array([  6.40612960e-01,   3.59386951e-01,   1.13161919e-11], dtype=float32), indices=array([ 6, 36,  5]))   
     
    As you can see from the pictures for predictions, the NN guessed the signs with 100% accuracy. 
    Looking at softmax probabilities we can see, that with 2 images probilities was not very high.
