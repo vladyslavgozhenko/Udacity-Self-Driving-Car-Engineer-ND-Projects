@@ -25,7 +25,7 @@ In this project I will use convolutional neural networks to classify traffic sig
 **Project3: Behavioral Cloning** 
 
 In this project, deep neural networks and convolutional neural networks will be used to clone driver's behavior.
-[Project3, Term 1, Behavioral Cloning.](https://github.com/wiwawo/CarND-Term1/tree/CarND-Behavioral-Cloning-P3-Project)
+[Project3, Term1, Behavioral Cloning.](https://github.com/wiwawo/CarND-Term1/tree/CarND-Behavioral-Cloning-P3-Project)
 <p align="center">
         <img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-Behavioral-Cloning-P3-Project/readme_images/driving.gif" width="480" alt="driving" />
 </p>
