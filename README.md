@@ -49,6 +49,8 @@ Additionally the simulator saves log file with pathes to images and the appropri
         <img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-Behavioral-Cloning-P3-Project/readme_images/center_2017_08_29_18_21_09_609_5.jpg" width="240" alt="rotated image" />
 </p>
 
+* With the simulator were generated 15152 images. After flipping all the images, I got a training set with 30304 images. Training set with rotated images (original and flipped) had 60608 images; it took apprx. 40 min to calculate one one epoch with 60608 images with 32 samples per batch on g3.4xlarge with 8GB GPU amazon instance.  
+
 * Visual information above the horizon is not relevant for training, so we crop it using keras during the model training (original images size 160px x 320px x 3channels):
 
         row_low = 25
