@@ -50,14 +50,19 @@ Additionally the simulator saves log file with pathes to images and the appropri
 </p>
 
 * Visual information above the horizon is not relevant for training, so we crop it using keras during the model training (original images size 160px x 320px x 3channels):
+
         row_low = 25
         row_high = 70
         model = Sequential()
         model.add(Cropping2D(cropping=((row_high,row_low), (0,0)), input_shape=(160,320,3)))
+        
 * Neural networks work better with normalized data, so let's normalize the data:
-        model.add(Lambda(lambda x: (x / 255) - 0.5))↲
+
+        model.add(Lambda(lambda x: (x / 255) - 0.5))
+        
 * Unfortunately I didn't see significant improvement in the model performance, when the rotation of the images was done. Therefore the data augmentation was created only with flipping original images without any rotations.
 * I tried several models for predicting steering angle from images (i.e. LeNet), but the best results showed the CNN, proposed by Nvidia Team. It has 5 convolutional layers and 4 fully connected layers (model.py):
+
       model = Sequential()
       model.add(Cropping2D(cropping=((row_high,row_low), (0,0)),  input_shape=(160,320,3)))    
       #Preprocess incoming data, centered around zero with small standard deviation•↲
