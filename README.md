@@ -1,7 +1,7 @@
 # Behaviorial Cloning Project
 
 <p align="center">
-![autonomous driving](readme_images/driving.gif)
+        <img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-Behavioral-Cloning-P3-Project/readme_images/driving.gif" width="480" alt="driving" />
 </p>
 
 Overview
