@@ -34,15 +34,15 @@ The goals / steps of this project are the following:
 * Simulator generates data in the following way: there is 3 cameras mounted on the car model in the simulator (left,middle and right cameras). When user actively drives the car, images from all 3 cameras are saved in the selected by user folder.
 Additionally the simulator saves log file with pathes to images and the appropriate steering angle at the moment when image was taken. The images look like this:
 <p align="center">
-![left camera](https://github.com/wiwawo/CarND-Term1/blob/CarND-Behavioral-Cloning-P3-Project/readme_images/left_2017_08_29_18_21_09_609.jpg)
-![center camera](https://github.com/wiwawo/CarND-Term1/blob/CarND-Behavioral-Cloning-P3-Project/readme_images/center_2017_08_29_18_21_09_609.jpg)
-![right camera](https://github.com/wiwawo/CarND-Term1/blob/CarND-Behavioral-Cloning-P3-Project/readme_images/right_2017_08_29_18_21_09_609.jpg)
+        <img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-Behavioral-Cloning-P3-Project/readme_images/left_2017_08_29_18_21_09_609.jpg" width="480" alt="left camera" />
+        <img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-Behavioral-Cloning-P3-Project/readme_images/center_2017_08_29_18_21_09_609.jpg" width="480" alt="central camera" />
+        <img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-Behavioral-Cloning-P3-Project/readme_images/right_2017_08_29_18_21_09_609.jpg" width="480" alt="right camera" />
 </p>
 * To create augmentation data, all images from all 3 cameras were flipped and rotated. Numerous simulation were done. It seams that left and right camera have to have offset +-0.2 degree. When the model will be trained, the augmentation data will help to avoid overfitting and  imporve generalization of new samples. The image modifications are done in python module prepare_files.py. There is an image from the central camera, that was flipped and rotated:
 <p align="center">
-![original image](readme_images/center_2017_08_29_18_21_09_609.jpg)
-![flipped image](readme_images/center_2017_08_29_18_21_09_609_flipped.jpg)
-![rotated image](readme_images/center_2017_08_29_18_21_09_609_5.jpg)
+        <img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-Behavioral-Cloning-P3-Project/readme_images/center_2017_08_29_18_21_09_609.jpg" width="480" alt="original image" />
+        <img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-Behavioral-Cloning-P3-Project/readme_images/center_2017_08_29_18_21_09_609_flipped.jpg" width="480" alt="flipped image" />
+        <img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-Behavioral-Cloning-P3-Project/readme_images/center_2017_08_29_18_21_09_609_5.jpg" width="480" alt="rotated image" />
 </p>
 
 * Visual information above the horizon is not relevant for training, so we crop it using keras during the model training (original images size 160px x 320px x 3channels):
@@ -75,7 +75,7 @@ Additionally the simulator saves log file with pathes to images and the appropri
 
 * After 3 epochs, 32 batches the loss on training and validation loss were (visualize_loss.py):
 <p align="center">
-![loss](readme_images/loss.jpg)
+        <img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-Behavioral-Cloning-P3-Project/readme_images/loss.jpg" width="480" alt="loss" />
 </p>
 It seems that difference between 2 losses is huge; in reality both losses are so small and scale is too big, there 2 losses are actually very small.
 * Saved keras  model was used with drive.py and video.py scripts to see the car's behavior in autonomous mode. The car managed to finish first track. On the second track it got stuck only at the end; it can be fixed by getting more data on that particular part of the road and retraining the model.
