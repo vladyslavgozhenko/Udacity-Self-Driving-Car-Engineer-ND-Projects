@@ -29,3 +29,12 @@ In this project, deep neural networks and convolutional neural networks will be 
 <p align="center">
         <img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-Behavioral-Cloning-P3-Project/readme_images/driving.gif" width="480" alt="driving" />
 </p>
+
+---
+**Project4: Advanced Lane Finding** 
+
+In this project, the goal is to write a software pipeline to identify the lane boundaries in a video.
+[Project3, Term1, Behavioral Cloning.](https://github.com/wiwawo/CarND-Term1/tree/CarND-Behavioral-Cloning-P3-Project)
+<p align="center">
+        <img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-Behavioral-Cloning-P3-Project/readme_images/driving.gif" width="480" alt="driving" />
+</p>
