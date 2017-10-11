@@ -34,7 +34,7 @@ In this project, deep neural networks and convolutional neural networks will be 
 **Project4: Advanced Lane Finding** 
 
 In this project, the goal is to write a software pipeline to identify the lane boundaries in a video.
-[Project3, Term1, Behavioral Cloning.](https://github.com/wiwawo/CarND-Term1/tree/CarND-Behavioral-Cloning-P3-Project)
+[Project4, Term1, Advanced Lane Finding .](https://github.com/wiwawo/CarND-Term1/tree/Advanced-Lane-Finding)
 <p align="center">
-        <img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-Behavioral-Cloning-P3-Project/readme_images/driving.gif" width="480" alt="driving" />
+        <img src="https://github.com/wiwawo/CarND-Term1/raw/Advanced-Lane-Finding/output_images/ZoneBetweenLinesBig.png" width="480" alt="driving" />
 </p>
