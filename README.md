@@ -1,7 +1,5 @@
 # Term1, Udacity Self-Driving Car Nanodegree Program.
 
-All projects from the Term1 will be saved in different branches of the following repository https://github.com/wiwawo/CarND-Term1/. It was done to avoid numerous repositories for projects from the same term.
-
 ## Project list:
 
 **Project1: Finding Lane Lines on the Road**
@@ -34,7 +32,18 @@ In this project, deep neural networks and convolutional neural networks will be 
 **Project4: Advanced Lane Finding** 
 
 In this project, the goal is to write a software pipeline to identify the lane boundaries in a video.
-[Project4, Term1, Advanced Lane Finding .](https://github.com/wiwawo/CarND-Term1/tree/Advanced-Lane-Finding)
+[Project4, Term1, Advanced Lane Finding .](https://github.com/wiwawo/CarND-Advanced-Lane-Finding)
 <p align="center">
-        <img src="https://github.com/wiwawo/CarND-Term1/raw/Advanced-Lane-Finding/output_images/ZoneBetweenLinesBig.png" width="480" alt="driving" />
+        <img src="https://github.com/wiwawo/CarND-Advanced-Lane-Finding/blob/master/output_images/ZoneBetweenLinesBig.png" width="480" alt="driving" />
 </p>
+
+---
+**Term2, Project 1: Extended Kalman Filter Project
+
+In the project [Extended Kalman Filter Project](https://github.com/wiwawo/Extended-Kalman-Filter-Project) I will utilize a kalman filter to estimate the state of a moving object of interest with noisy lidar and radar measurements.
+<p align='center'>
+<img src="https://github.com/wiwawo/Extended-Kalman-Filter-Project/blob/master/src/Simulator.png" width="480" alt="simulator" />
+</p>
+
+
+
