@@ -45,5 +45,10 @@ In the project [Extended Kalman Filter Project](https://github.com/wiwawo/Extend
 <img src="https://github.com/wiwawo/Extended-Kalman-Filter-Project/blob/master/src/Simulator.png" width="480" alt="simulator" />
 </p>
 
+---
+**Term2, Project 2: Unscented Kalman Filter Project
 
-
+In the project [Unscented Kalman Filter Project](https://github.com/wiwawo/Unscented-Kalman-Filter-Project) I will utilize an unscented kalman filter to estimate the state of a moving object of interest with noisy lidar and radar measurements.
+<p align='center'>
+<img src="https://github.com/wiwawo/Unscented-Kalman-Filter-Project/blob/master/Simulator.png" width="480" alt="simulator" />
+</p>
