@@ -37,8 +37,12 @@ In this project, the goal is to write a software pipeline to identify the lane b
         <img src="https://github.com/wiwawo/CarND-Advanced-Lane-Finding/blob/master/output_images/ZoneBetweenLinesBig.png" width="480" alt="driving" />
 </p>
 
+# Term2, Udacity Self-Driving Car Nanodegree Program.
+
+## Project list:
+
 ---
-**Term2, Project 1: Extended Kalman Filter Project
+**Project 1: Extended Kalman Filter Project
 
 In the project [Extended Kalman Filter Project](https://github.com/wiwawo/Extended-Kalman-Filter-Project) I will utilize a kalman filter to estimate the state of a moving object of interest with noisy lidar and radar measurements.
 <p align='center'>
@@ -46,7 +50,7 @@ In the project [Extended Kalman Filter Project](https://github.com/wiwawo/Extend
 </p>
 
 ---
-**Term2, Project 2: Unscented Kalman Filter Project
+**Project 2: Unscented Kalman Filter Project
 
 In the project [Unscented Kalman Filter Project](https://github.com/wiwawo/Unscented-Kalman-Filter-Project) I will utilize an unscented kalman filter to estimate the state of a moving object of interest with noisy lidar and radar measurements.
 <p align='center'>
@@ -54,7 +58,7 @@ In the project [Unscented Kalman Filter Project](https://github.com/wiwawo/Unsce
 </p>
 
 ---
-**Term2, Project 4: PID-Control Project
+**Project 4: PID-Control Project
 <p align='center'>
 <img src="https://github.com/wiwawo/CarND-PID-Control-Project/blob/master/video/pid_anime.gif" width="480" alt="simulator" />
 </p>
