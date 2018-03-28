@@ -59,4 +59,4 @@ In the project [Unscented Kalman Filter Project](https://github.com/wiwawo/Unsce
 <img src="https://github.com/wiwawo/CarND-PID-Control-Project/blob/master/video/pid_anime.gif" width="480" alt="simulator" />
 </p>
 
-In this project I will utilize PID-Control method to calculate steering angle for a car.
+In [PID-Control Project](https://github.com/wiwawo/CarND-PID-Control-Project/) I will utilize PID-Control method to calculate steering angle for a car.
