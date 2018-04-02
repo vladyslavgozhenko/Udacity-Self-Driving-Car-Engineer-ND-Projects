@@ -42,7 +42,7 @@ In this project, the goal is to write a software pipeline to identify the lane b
 ## Project list:
 
 ---
-**Project 1: Extended Kalman Filter Project
+**Project 1: Extended Kalman Filter Project**
 
 In the project [Extended Kalman Filter Project](https://github.com/wiwawo/Extended-Kalman-Filter-Project) I will utilize a kalman filter to estimate the state of a moving object of interest with noisy lidar and radar measurements.
 <p align='center'>
@@ -50,7 +50,7 @@ In the project [Extended Kalman Filter Project](https://github.com/wiwawo/Extend
 </p>
 
 ---
-**Project 2: Unscented Kalman Filter Project
+**Project 2: Unscented Kalman Filter Project**
 
 In the project [Unscented Kalman Filter Project](https://github.com/wiwawo/Unscented-Kalman-Filter-Project) I will utilize an unscented kalman filter to estimate the state of a moving object of interest with noisy lidar and radar measurements.
 <p align='center'>
@@ -58,7 +58,7 @@ In the project [Unscented Kalman Filter Project](https://github.com/wiwawo/Unsce
 </p>
 
 ---
-**Project 3: CarND-Kidnapped-Vehicle-Project
+**Project 3: CarND-Kidnapped-Vehicle-Project**
 <p align='center'>
 <img src="https://github.com/wiwawo/CarND-Kidnapped-Vehicle-Project/blob/master/particle_filter_anime.gif" width="480" alt="simulator" />
 </p>
@@ -68,7 +68,7 @@ In [CarND-Kidnapped-Vehicle-Project](https://github.com/wiwawo/CarND-Kidnapped-V
 In this project I will implement a 2 dimensional particle filter in C++. The particle filter will be given a map and some initial localization information (analogous to what a GPS would provide). At each time step your filter will also get observation and control data.
 
 ---
-**Project 4: PID-Control Project
+**Project 4: PID-Control Project**
 <p align='center'>
 <img src="https://github.com/wiwawo/CarND-PID-Control-Project/blob/master/video/pid_anime.gif" width="480" alt="simulator" />
 </p>
