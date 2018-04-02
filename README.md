@@ -65,7 +65,7 @@ In the project [Unscented Kalman Filter Project](https://github.com/wiwawo/Unsce
 
 In [CarND-Kidnapped-Vehicle-Project](https://github.com/wiwawo/CarND-Kidnapped-Vehicle-Project.git) a robot has been kidnapped and transported to a new location! Luckily it has a map of this location, a (noisy) GPS estimate of its initial location, and lots of (noisy) sensor and control data.
 
-In this project I will implement a 2 dimensional particle filter in C++. The particle filter will be given a map and some initial localization information (analogous to what a GPS would provide). At each time step your filter will also get observation and control data.
+In this project I will implement a 2 dimensional particle filter in C++. The particle filter will be given a map and some initial localization information (analogous to what a GPS would provide). At each time step the filter will also get observation and control data.
 
 ---
 **Project 4: PID-Control Project**
