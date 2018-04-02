@@ -58,9 +58,21 @@ In the project [Unscented Kalman Filter Project](https://github.com/wiwawo/Unsce
 </p>
 
 ---
+**Project 3: CarND-Kidnapped-Vehicle-Project
+<p align='center'>
+<img src="https://github.com/wiwawo/CarND-Kidnapped-Vehicle-Project/blob/master/particle_filter_anime.gif" width="480" alt="simulator" />
+</p>
+
+In [CarND-Kidnapped-Vehicle-Project](https://github.com/wiwawo/CarND-Kidnapped-Vehicle-Project.git) a robot has been kidnapped and transported to a new location! Luckily it has a map of this location, a (noisy) GPS estimate of its initial location, and lots of (noisy) sensor and control data.
+
+In this project I will implement a 2 dimensional particle filter in C++. The particle filter will be given a map and some initial localization information (analogous to what a GPS would provide). At each time step your filter will also get observation and control data.
+
+---
 **Project 4: PID-Control Project
 <p align='center'>
 <img src="https://github.com/wiwawo/CarND-PID-Control-Project/blob/master/video/pid_anime.gif" width="480" alt="simulator" />
 </p>
 
 In [PID-Control Project](https://github.com/wiwawo/CarND-PID-Control-Project/) I will utilize PID-Control method to calculate steering angle for a car.
+
+
