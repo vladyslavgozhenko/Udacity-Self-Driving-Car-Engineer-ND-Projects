@@ -7,7 +7,7 @@
 In this project the left and right lanes will be annotated in video files.
 [Project1, Term1, Lane Lines.](https://github.com/wiwawo/CarND-Term1/tree/CarND-LaneLines-P1-master)
 <p align='center'>
-<img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-LaneLines-P1-master/examples/laneLines_thirdPass.jpg" width="480" alt="lane lines" />
+<img src="https://github.com/wiwawo/CarND-Term1/blob/CarND-LaneLines-P1-master/examples/lanes_anime.gif" width="480" alt="lane lines" />
 </p>
 
 ---
