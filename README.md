@@ -34,7 +34,7 @@ In this project, deep neural networks and convolutional neural networks will be 
 In this project, the goal is to write a software pipeline to identify the lane boundaries in a video.
 [Project4, Term1, Advanced Lane Finding .](https://github.com/wiwawo/CarND-Advanced-Lane-Finding)
 <p align="center">
-        <img src="https://github.com/wiwawo/CarND-Advanced-Lane-Finding/blob/master/output_images/ZoneBetweenLinesBig.png" width="480" alt="driving" />
+        <img src="https://github.com/wiwawo/CarND-Advanced-Lane-Finding/blob/master/output_images/advanced_lanes_anime.gif" width="480" alt="driving" />
 </p>
 
 # Term2, Udacity Self-Driving Car Nanodegree Program.
