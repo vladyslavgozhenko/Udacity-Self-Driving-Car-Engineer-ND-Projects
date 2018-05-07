@@ -76,9 +76,9 @@ In this project I will implement a 2 dimensional particle filter in C++. The par
 In [PID-Control Project](https://github.com/wiwawo/CarND-PID-Control-Project/) I will utilize PID-Control method to calculate steering angle for a car.
 
 ---
-**Project 5: CarND-Controls-MPC**
+**Project 5: CarND-MPC-Project**
 
-In this project I'll implement Model Predictive Control to drive the car around the track. The simulator will provide coordinates of the desired car trajectory  and car's current coordinates and orientation. The model will calculate the steering angle and throttle. Additionally, there's a 100 millisecond latency between actuation commands.
+In [CarND-MPC-Project](https://github.com/wiwawo/CarND-MPC-Project/) I'll implement Model Predictive Control to drive the car around the track. The simulator will provide coordinates of the desired car trajectory  and car's current coordinates and orientation. The model will calculate the steering angle and throttle. Additionally, there's a 100 millisecond latency between actuation commands.
 
 <p align='center'>
 <img src="https://github.com/vladyslavgozhenko/CarND-MPC-Project/blob/master/pics/mpc_anime1.gif" width="480" alt="simulator" />
